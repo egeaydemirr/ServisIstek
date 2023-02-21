@@ -13,7 +13,7 @@ protocol IFoxService {
 }
 
 //https://randomfox.ca//?i=26
-class FoxService {
+class FoxService: IFoxService {
     private let baseUrl: String = "https://randomfox.ca//"
     
     func fetchItem(path:FoxPath,onSuccess: @escaping (FoxModel, Bool) -> Void){
