@@ -51,6 +51,7 @@
 		93C5E03929A3E46700954C32 /* ServisIstek */ = {
 			isa = PBXGroup;
 			children = (
+				93C5E04829A4D25900954C32 /* Features */,
 				93C5E03A29A3E46700954C32 /* ServisIstekApp.swift */,
 				93C5E03C29A3E46700954C32 /* ContentView.swift */,
 				93C5E03E29A3E46900954C32 /* Assets.xcassets */,
@@ -65,6 +66,53 @@
 				93C5E04129A3E46900954C32 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93C5E04829A4D25900954C32 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				93C5E04929A4D26700954C32 /* FoxViewModel */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		93C5E04929A4D26700954C32 /* FoxViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				93C5E04D29A4D2BC00954C32 /* Model */,
+				93C5E04C29A4D2B000954C32 /* Service */,
+				93C5E04B29A4D28100954C32 /* ViewModel */,
+				93C5E04A29A4D27800954C32 /* View */,
+			);
+			path = FoxViewModel;
+			sourceTree = "<group>";
+		};
+		93C5E04A29A4D27800954C32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93C5E04B29A4D28100954C32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93C5E04C29A4D2B000954C32 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		93C5E04D29A4D2BC00954C32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
