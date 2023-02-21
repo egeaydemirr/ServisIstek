@@ -8,17 +8,20 @@
 import Foundation
 import Alamofire
 
+protocol IFoxService {
+    func fetchItem(path:FoxPath,onSuccess: @escaping (FoxModel, Bool) -> Void)
+}
 
 //https://randomfox.ca//?i=26
 class FoxService {
     private let baseUrl: String = "https://randomfox.ca//"
     
-    func fetchItem(path:FoxPath,onSuccess: @escaping (FoxModel) -> Void){
+    func fetchItem(path:FoxPath,onSuccess: @escaping (FoxModel, Bool) -> Void){
         AF.request(baseUrl + path.rawValue).responseDecodable(of:FoxModel.self ,completionHandler: {response in
             response.value
             
             guard let value = response.value else { return  }
-            onSuccess(value)
+            onSuccess(value, true)
         })
     }
 }
