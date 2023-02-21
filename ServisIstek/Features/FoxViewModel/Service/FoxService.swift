@@ -13,9 +13,12 @@ import Alamofire
 class FoxService {
     private let baseUrl: String = "https://randomfox.ca//"
     
-    func fetchItem(path:FoxPath){
+    func fetchItem(path:FoxPath,onSuccess: @escaping (FoxModel) -> Void){
         AF.request(baseUrl + path.rawValue).responseDecodable(of:FoxModel.self ,completionHandler: {response in
             response.value
+            
+            guard let value = response.value else { return  }
+            onSuccess(value)
         })
     }
 }
