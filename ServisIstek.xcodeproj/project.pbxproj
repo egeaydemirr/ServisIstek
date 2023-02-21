@@ -13,6 +13,9 @@
 		93C5E04229A3E46900954C32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C5E04129A3E46900954C32 /* Preview Assets.xcassets */; };
 		93C5E04F29A4D32F00954C32 /* RandomFoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5E04E29A4D32F00954C32 /* RandomFoxView.swift */; };
 		93C5E05229A4D66900954C32 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 93C5E05129A4D66900954C32 /* Kingfisher */; };
+		93C5E05429A4D93200954C32 /* FoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5E05329A4D93200954C32 /* FoxModel.swift */; };
+		93C5E05729A4E3A300954C32 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 93C5E05629A4E3A300954C32 /* Alamofire */; };
+		93C5E05929A4E3B500954C32 /* FoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5E05829A4E3B500954C32 /* FoxService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,8 @@
 		93C5E03E29A3E46900954C32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93C5E04129A3E46900954C32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		93C5E04E29A4D32F00954C32 /* RandomFoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFoxView.swift; sourceTree = "<group>"; };
+		93C5E05329A4D93200954C32 /* FoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxModel.swift; sourceTree = "<group>"; };
+		93C5E05829A4E3B500954C32 /* FoxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C5E05229A4D66900954C32 /* Kingfisher in Frameworks */,
+				93C5E05729A4E3A300954C32 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +115,7 @@
 		93C5E04C29A4D2B000954C32 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				93C5E05829A4E3B500954C32 /* FoxService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -116,6 +123,7 @@
 		93C5E04D29A4D2BC00954C32 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				93C5E05329A4D93200954C32 /* FoxModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 			name = ServisIstek;
 			packageProductDependencies = (
 				93C5E05129A4D66900954C32 /* Kingfisher */,
+				93C5E05629A4E3A300954C32 /* Alamofire */,
 			);
 			productName = ServisIstek;
 			productReference = 93C5E03729A3E46700954C32 /* ServisIstek.app */;
@@ -169,6 +178,7 @@
 			mainGroup = 93C5E02E29A3E46700954C32;
 			packageReferences = (
 				93C5E05029A4D66900954C32 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				93C5E05529A4E3A200954C32 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 93C5E03829A3E46700954C32 /* Products */;
 			projectDirPath = "";
@@ -197,8 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C5E03D29A3E46700954C32 /* ContentView.swift in Sources */,
+				93C5E05929A4E3B500954C32 /* FoxService.swift in Sources */,
 				93C5E04F29A4D32F00954C32 /* RandomFoxView.swift in Sources */,
 				93C5E03B29A3E46700954C32 /* ServisIstekApp.swift in Sources */,
+				93C5E05429A4D93200954C32 /* FoxModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +421,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		93C5E05529A4E3A200954C32 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -416,6 +436,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 93C5E05029A4D66900954C32 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		93C5E05629A4E3A300954C32 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93C5E05529A4E3A200954C32 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
