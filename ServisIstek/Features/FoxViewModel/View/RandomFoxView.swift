@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct RandomFoxView: View {
     // MARK: - PROPERTIES
@@ -26,6 +27,7 @@ struct RandomFoxView: View {
             }
             .padding()
             Spacer()
+         KFImage(URL(string: "https://randomfox.ca//images//26.jpg"))
         }
     }
 }
