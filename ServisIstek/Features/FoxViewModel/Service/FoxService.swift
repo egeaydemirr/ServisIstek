@@ -14,7 +14,9 @@ class FoxService {
     private let baseUrl: String = "https://randomfox.ca//"
     
     func fetchItem(path:FoxPath){
-        
+        AF.request(baseUrl + path.rawValue).responseDecodable(of:FoxModel.self ,completionHandler: {response in
+            response.value
+        })
     }
 }
 
